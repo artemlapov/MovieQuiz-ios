@@ -15,7 +15,7 @@ struct QuizStepViewModel {
 struct QuizResultsViewModel {
     let title: String
     let text: String
-    let buttonText: String
+    let buttonText: String 
 }
 
 let questions: [QuizQuestion] = [
