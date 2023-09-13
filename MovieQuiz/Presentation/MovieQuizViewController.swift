@@ -65,13 +65,16 @@ let questions: [QuizQuestion] = [
 
 final class MovieQuizViewController: UIViewController {
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     @IBOutlet private var counterLabel: UILabel!
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var questionLabel: UILabel!
 
     private var currentQuestionIndex = 0
     private var correctAnswers = 0
-
 
 
     // MARK: - Lifecycle
