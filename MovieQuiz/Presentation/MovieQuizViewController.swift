@@ -131,6 +131,7 @@ final class MovieQuizViewController: UIViewController {
         imageView.layer.cornerRadius = 20
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.imageView.layer.borderWidth = 0
             self.showNextQuestionOrResults()
         }
     }
