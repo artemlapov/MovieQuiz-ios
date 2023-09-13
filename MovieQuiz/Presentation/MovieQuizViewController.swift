@@ -69,13 +69,12 @@ final class MovieQuizViewController: UIViewController {
         return .lightContent
     }
 
-    @IBOutlet private var counterLabel: UILabel!
-    @IBOutlet private var imageView: UIImageView!
-    @IBOutlet private var questionLabel: UILabel!
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var questionLabel: UILabel!
 
     private var currentQuestionIndex = 0
     private var correctAnswers = 0
-
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -100,6 +99,7 @@ final class MovieQuizViewController: UIViewController {
             questionNumber: "\(currentQuestionIndex + 1)/\(questions.count)"
         )
     }
+
     private func show(quiz step: QuizStepViewModel) {
         counterLabel.text = step.questionNumber
         imageView.image = step.image
@@ -125,6 +125,7 @@ final class MovieQuizViewController: UIViewController {
 
         self.present(alert, animated: true, completion: nil)
     }
+
     private func showAnswerResult(isCorrect: Bool) {
         if isCorrect {
             correctAnswers += 1
